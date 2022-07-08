@@ -1,4 +1,6 @@
+import 'package:fiap_mobile_trabalho/main/factories/pages/home/home_screen_factory.dart';
 import 'package:fiap_mobile_trabalho/main/factories/pages/login/login_screen_factory.dart';
+import 'package:fiap_mobile_trabalho/ui/home/home_screen.dart';
 import 'package:fiap_mobile_trabalho/ui/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: LoginScreen.id,
       getPages: [
         GetPage(name: LoginScreen.id, page: makeLoginScreen),
+        GetPage(name: HomeScreen.id, page: makeHomeScreen),
       ],
     );
   }

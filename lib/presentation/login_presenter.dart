@@ -1,3 +1,4 @@
+import 'package:fiap_mobile_trabalho/ui/home/home_screen.dart';
 import 'package:get/get.dart';
 
 class LoginPresenter extends GetxController {
@@ -16,7 +17,7 @@ class LoginPresenter extends GetxController {
   }
 
   void onLoginButtonPressed() async {
-    
+    Get.offNamed(HomeScreen.id);
   }
 
   void onRegisterButtonPressed() async {
