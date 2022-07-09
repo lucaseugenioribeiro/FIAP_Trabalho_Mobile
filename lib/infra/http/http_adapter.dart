@@ -11,12 +11,14 @@ class HttpAdapter extends HttpClient {
   final Client client;
 
   @override
-  Future<Map<String, dynamic>?> get({required String url}) async {
+  Future<List<dynamic>?> get({required String url}) async {
     var response = Response('', 500);
     try {
       final uri = Uri.parse(url);
-      response = await client.get(uri).timeout(
-        const Duration(seconds: 600),
+      response = await client.get(
+        uri,
+        headers: {"Accept":"application/json"})
+        .timeout(const Duration(seconds: 600),
       );
     } catch (error) {
       throw HttpError.serverError;

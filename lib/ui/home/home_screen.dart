@@ -26,12 +26,14 @@ class HomeScreen extends StatelessWidget {
     });
 
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 224, 204, 178),
       body: SafeArea(
-        child: Obx(
+        child: 
+        Obx(
           () {
-            final moviesList = presenter.organizationList.value;
+            final organizationList = presenter.organizationList.value;
             return ListView.separated(
-              itemCount: moviesList.length,
+              itemCount: organizationList.length,
               separatorBuilder: (context, index) => const SizedBox(height: 16),
               itemBuilder: (context, index) => Card(
                 elevation: 4,
@@ -39,40 +41,42 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: SizedBox(
-                  height: 160,
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 16,
-                            horizontal: 16,
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                moviesList[index].oganisationName,
-                                overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
+                child: (
+                  SizedBox(                  
+                    height: 160,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 16,
+                              horizontal: 16,
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  organizationList[index].organisationName,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                              Text('Rating: ${moviesList[index].oganisationName}'),
-                              Text(
-                                moviesList[index].oganisationName,
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 5,
-                              ),
-                            ],
+                                Text('Rating: ${organizationList[index].legalEntityName}'),
+                                Text(
+                                  organizationList [index].city,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 5,
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      )
-                    ],
-                  ),
+                        )
+                      ],
+                    ),
+                  )
                 ),
               ),
             );

@@ -18,16 +18,15 @@ class RemoteFetchOrganization extends FetchOrganization {
   @override
   Future<List<OrganizationEntity>> execute() async {
     try {
-      //TODO: URL DO DIRETORIO NAO FUNCIONA
-      //final response = await httpClient.get(url: 'https://data.directory.openbankingbrasil.org.br/participants');
-      final response = await httpClient.get(url: 'https://demo7206081.mockable.io/movies');
-      log('dataPASSOU dataPASSOUdataPASSOU');
+      
+      final response = await httpClient.get(url: 'https://data.directory.openbankingbrasil.org.br/participants');
+      //final response = await httpClient.get(url: 'https://demo7206081.mockable.io/movies');
+      
+      final organizationList = 
+        response?.map<OrganizationEntity>((json) => OrganizationModel.fromJson(json).toEntity())
+        .toList();
 
-      final moviesList = response?['results']
-          .map<OrganizationEntity>((json) => OrganizationModel.fromJson(json).toEntity())
-          .toList();
-
-      return moviesList ?? [];
+      return organizationList ?? [];
     } on HttpError catch (error) {
       if (error == HttpError.forbidden || error == HttpError.unauthorized) {
         throw DomainError.invalidCredentials;

@@ -1,5 +1,5 @@
 abstract class HttpClient {
-  Future<Map<String, dynamic>?> get({
+  Future<List<dynamic>?> get({
     required String url,
   });
 }
