@@ -1,16 +1,35 @@
-# fiap_mobile_trabalho
+# ListaOPB
 
-Trabalho final Mobile FIAP
+## Descrição do Projeto
 
-## Getting Started
+ListaOPB, é Aplicação WEB, construida utilizando o framework Flutter.
+Para saber mais sobre Flutter -> https://flutter.dev.
 
-This project is a starting point for a Flutter application.
+## Funcionalidades da Versão 
 
-A few resources to get you started if this is your first Flutter project:
+Construído como atividade prática da disciplina de _MOBILE DEVELOPMENT_ do __MBA de Fullstack Development__ da FIAP, em sua primeira versão a aplicação está preparada para:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+* Realizar Login;
+* Realizar Cadastro;
+* Home com a listagem dos participantes do Open Banking no Brasil.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Como usar?
+
+### Baixando o projeto e rodando a aplicação de forma local
+
+O projeto está disponível para [acesso ou download](https://github.com/grupojavafiap/severino-bot) via GitHub. 
+
+#### Instruções 
+1. Rodar o arquivo _main.dart_ da pasta /lib utilizando o Flutter.
+
+Pronto! Agora é só navegar nas paginas da aplicação.
+
+### Desenvolvedores
+
+| RM  | Aluno | Turma |
+| ------------- |:-------------:| --------- | 
+| 344801      | Lucas Eugenio Ribeiro     | 1SCJRBB-2022 |
+| 344792      | Benisson dos Santos Lopes     | 1SCJRBB-2022 |
+| 344794      | César de Lira Santos     | 1SCJRBB-2022 |
+| 344799      | Leonardo Guerra Torres Filho     | 1SCJRBB-2022 |
+| 344791      | Anderson Evangelista     | 1SCJRBB-2022 |

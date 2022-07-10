@@ -1,19 +1,19 @@
 import 'package:fiap_mobile_trabalho/presentation/login_presenter.dart';
+import 'package:fiap_mobile_trabalho/presentation/register_presenter.dart';
 import 'package:fiap_mobile_trabalho/ui/components/rounded_button.dart';
 import 'package:fiap_mobile_trabalho/ui/components/rounded_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  static const String id = '/login';
+class RegisterScreen extends StatelessWidget {
+  static const String id = '/register';
 
-  const LoginScreen({
+  const RegisterScreen({
     Key? key,
     required this.presenter,
   }) : super(key: key);
 
-  final LoginPresenter presenter;
+  final RegisterPresenter presenter;
 
   void showError(String errorMessage) async {
     Get.snackbar(errorMessage, '');
@@ -42,11 +42,6 @@ class LoginScreen extends StatelessWidget {
               RoundedTextField(
                 hint: 'Senha',
                 onTextChanged: presenter.onPasswordUpdate,
-              ),
-              const SizedBox(height: 32.0),
-              RoundedButton(
-                text: 'Entrar',
-                onPressed: presenter.onLoginButtonPressed,
               ),
               const SizedBox(height: 32.0),
               RoundedButton(

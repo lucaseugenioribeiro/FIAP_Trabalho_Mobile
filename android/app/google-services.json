@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1049307388737",
+    "project_id": "fiap-trabalho-mobile",
+    "storage_bucket": "fiap-trabalho-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049307388737:android:ec937f700fa89fc2519fc0",
+        "android_client_info": {
+          "package_name": "br.com.trabalho.fiap_mobile_trabalho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049307388737-9n7aib9ubm3effbffr47ip2h1tu9408t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6NvC8psMpUUXfZGcanPSXS-8f-_Q19CI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049307388737-9n7aib9ubm3effbffr47ip2h1tu9408t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

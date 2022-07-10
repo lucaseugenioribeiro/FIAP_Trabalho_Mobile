@@ -1,19 +1,15 @@
-import 'package:fiap_mobile_trabalho/domain/usecases/auth/login_with_email.dart';
 import 'package:fiap_mobile_trabalho/domain/usecases/auth/register_with_email.dart';
 import 'package:fiap_mobile_trabalho/ui/home/home_screen.dart';
-import 'package:fiap_mobile_trabalho/ui/register/register_screen.dart';
 import 'package:get/get.dart';
 
-class LoginPresenter extends GetxController {
+class RegisterPresenter extends GetxController {
  
-  LoginPresenter({
-    required this.loginWithEmail,
+  RegisterPresenter({
     required this.registerWithEmail,
   });
 
   final errorMessage = RxString('');
 
-  LoginWithEmail loginWithEmail;
   RegisterWithEmail registerWithEmail;
 
   var userEmail = '';
@@ -27,16 +23,12 @@ class LoginPresenter extends GetxController {
     userPassword = password;
   }
 
-  void onLoginButtonPressed() async {
-    var user = await loginWithEmail.execute(userEmail, userPassword);
+  void onRegisterButtonPressed() async {
+    var user = await registerWithEmail.execute(userEmail, userPassword);
     if (user == null) {
-      errorMessage.value = 'Credenciais inválidas';
+      errorMessage.value = 'Erro, tente novamentse';
     } else {
       Get.offNamed(HomeScreen.id);
     }
-  }
-
-  void onRegisterButtonPressed() async {
-    Get.offNamed(RegisterScreen.id);
   }
 }

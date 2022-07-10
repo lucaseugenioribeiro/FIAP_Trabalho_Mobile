@@ -21,12 +21,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     presenter.onInit();
+    
     presenter.errorMessage.listen((errorMessage) {
       if (errorMessage.isNotEmpty) showError(errorMessage);
     });
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 224, 204, 178),
       body: SafeArea(
         child: 
         Obx(

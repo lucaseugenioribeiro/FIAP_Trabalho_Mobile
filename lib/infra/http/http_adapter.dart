@@ -17,7 +17,10 @@ class HttpAdapter extends HttpClient {
       final uri = Uri.parse(url);
       response = await client.get(
         uri,
-        headers: {"Accept":"application/json"})
+        headers: {
+          "Accept":"application/json",
+          "Access-Control-Allow-Origin":"*"
+          })
         .timeout(const Duration(seconds: 600),
       );
     } catch (error) {
