@@ -19,8 +19,9 @@ class RemoteFetchOrganization extends FetchOrganization {
   Future<List<OrganizationEntity>> execute() async {
     try {
       
-      final response = await httpClient.get(url: 'https://data.directory.openbankingbrasil.org.br/participants');
-      //final response = await httpClient.get(url: 'https://demo7206081.mockable.io/movies');
+      final response = await httpClient.get(url: 'https://participants-open-banking.herokuapp.com');
+
+      //final response = await httpClient.get(url: 'https://data.directory.openbankingbrasil.org.br/participants');
       
       final organizationList = 
         response?.map<OrganizationEntity>((json) => OrganizationModel.fromJson(json).toEntity())
