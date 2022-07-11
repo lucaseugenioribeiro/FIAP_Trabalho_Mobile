@@ -3,7 +3,7 @@
 ## Descrição do Projeto
 
 ListaOPB, é Aplicação WEB, construida utilizando o framework Flutter.
-Para saber mais sobre Flutter -> https://flutter.dev.
+* Para saber mais sobre Flutter -> https://flutter.dev.
 
 ## Funcionalidades da Versão 
 
@@ -13,11 +13,16 @@ Construído como atividade prática da disciplina de _MOBILE DEVELOPMENT_ do __M
 * Realizar Cadastro;
 * Home com a listagem dos participantes do Open Banking no Brasil.
 
+## Descrição
+
+* Foi utilizado o Firebase para cadastro e login do usuario
+* Disponibilizada API no heroku para listar os participantes do Open Banking.
+
 ## Como usar?
 
 ### Baixando o projeto e rodando a aplicação de forma local
 
-O projeto está disponível para [acesso ou download](https://github.com/grupojavafiap/severino-bot) via GitHub. 
+O projeto está disponível para [acesso ou download](https://github.com/lucaseugenioribeiro/FIAP_Trabalho_Mobile) via GitHub. 
 
 #### Instruções 
 1. Rodar o arquivo _main.dart_ da pasta /lib utilizando o Flutter.
