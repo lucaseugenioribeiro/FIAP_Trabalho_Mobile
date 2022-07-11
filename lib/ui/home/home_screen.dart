@@ -27,6 +27,11 @@ class HomeScreen extends StatelessWidget {
     });
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Participantes do Open Banking Brasil',
+        ),
+      ),
       body: SafeArea(
         child: 
         Obx(
@@ -57,16 +62,16 @@ class HomeScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  organizationList[index].organisationName,
+                                  'Nome: ${organizationList[index].organisationName}',
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Text('Rating: ${organizationList[index].legalEntityName}'),
+                                Text(organizationList[index].legalEntityName),
                                 Text(
-                                  organizationList [index].city,
+                                  'Cidade: ${organizationList [index].city}',
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 5,
                                 ),
